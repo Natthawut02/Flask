@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บช่วยติวสอบ</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/">หน้าแรก</a> |
+        <a href="/exams">ข้อสอบ</a> |
+        <a href="/tips">ทริคการอ่าน</a> |
+        <a href="/login">เข้าสู่ระบบ</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>
