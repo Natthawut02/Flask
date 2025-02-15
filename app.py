@@ -51,6 +51,18 @@ def register():
     
     return render_template('register.html')
 
+@app.route('/exams')
+def exams():
+    return render_template('exams.html')
+
+@app.route('/tips')
+def tips():
+    return render_template('tips.html')
+
+@app.route('/questions')
+def questions():
+    return render_template('questions.html')
+
 with app.app_context():
     db.create_all()
 

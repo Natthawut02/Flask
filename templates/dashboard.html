@@ -12,6 +12,27 @@
     <a href="{{ url_for('home') }}">
         <button>กลับไปหน้าแรก</button>
     </a>
+    <a href="{{ url_for('questions') }}">
+        <button>
+            <img src="{{ url_for('static', filename='images/questions.png') }}" alt="รวมโจทย์"
+                style="width: 50px; height: 50px;">
+            รวมโจทย์
+        </button>
+    </a>
+    <a href="{{ url_for('exams') }}">
+        <button>
+            <img src="{{ url_for('static', filename='images/exams.png') }}" alt="ข้อสอบ"
+                style="width: 50px; height: 50px;">
+            ข้อสอบ
+        </button>
+    </a>
+    <a href="{{ url_for('tips') }}">
+        <button>
+            <img src="{{ url_for('static', filename='images/tips.png') }}" alt="ทริคการอ่าน"
+                style="width: 50px; height: 50px;">
+            ทริคการอ่าน
+        </button>
+    </a>
 </body>
 
 </html>
