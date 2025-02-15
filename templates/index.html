@@ -1,14 +1,20 @@
+<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Flask App</title>
+    <title>หน้าแรก - เว็บช่วยติวสอบ</title>
 </head>
 
 <body>
-    <h1>Welcome to My Flask Website</h1>
+    <h1>ยินดีต้อนรับสู่เว็บช่วยติวสอบ 📚</h1>
+    <p>รวมโจทย์ ข้อสอบ และทริคการอ่าน</p>
+
+    <a href="{{ url_for('login') }}">
+        <button>เข้าสู่ระบบ</button>
+    </a>
 </body>
 
 </html>
