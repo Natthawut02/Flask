@@ -16,6 +16,10 @@ class User(db.Model):
 def home():
     return render_template('index.html')
 
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -24,7 +28,7 @@ def login():
         
         user = User.query.filter_by(username=username, password=password).first()
         if user:
-            return redirect(url_for('home'))
+            return redirect(url_for('dashboard'))
         else:
             return render_template('login.html', error="ชื่อผู้ใช้หรือรหัสผ่านผิด!")
 
