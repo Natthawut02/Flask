@@ -15,34 +15,45 @@
         .button-container a {
             text-align: center;
         }
+
+        .button-container button {
+            width: 400px;
+            height: 500px;
+            margin: 10px;
+            background-size: cover;
+            background-position: center;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .button-container button:hover {
+            width: 220px;
+            height: 220px;
+        }
     </style>
 </head>
 
 <body>
     <h1>ยินดีต้อนรับสู่มวณความรู้</h1>
     <a href="{{ url_for('home') }}">
-        <button>กลับไปหน้าแรก</button>
     </a>
     <div class="button-container">
         <a href="{{ url_for('questions') }}">
-            <button style="width: 200px; height: 500px; margin: 10px;">
-                <img src="{{ url_for('static', filename='images/questions.png') }}" alt="รวมโจทย์"
-                    style="width: 100px; height: 100px;">
-                <br>รวมโจทย์
+            <button style="background-image: url('{{ url_for('static', filename='images/questions.png') }}');">
+                รวมโจทย์
             </button>
         </a>
         <a href="{{ url_for('exams') }}">
-            <button style="width: 200px; height: 500px; margin: 10px;">
-                <img src="{{ url_for('static', filename='images/exams.png') }}" alt="ข้อสอบ"
-                    style="width: 100px; height: 100px;">
-                <br>ข้อสอบ
+            <button style="background-image: url('{{ url_for('static', filename='images/exams.png') }}');">
+                ข้อสอบ
             </button>
         </a>
         <a href="{{ url_for('tips') }}">
-            <button style="width: 200px; height: 500px; margin: 10px;">
-                <img src="{{ url_for('static', filename='images/tips.png') }}" alt=""
-                    style="width: 100px; height: 100px;">
-                <br>ทริคการอ่าน
+            <button style="background-image: url('{{ url_for('static', filename='images/tips.png') }}');">
+                ทริคการอ่าน
             </button>
         </a>
     </div>

@@ -31,6 +31,9 @@
                             </div>
                             <button type="submit" class="btn btn-primary w-100">เข้าสู่ระบบ</button>
                         </form>
+                        <div class="text-center mt-3">
+                            <a href="{{ url_for('register') }}" class="btn btn-secondary w-100">สมัครสมาชิก</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,10 +42,6 @@
 </body>
 
 </html>
-
-<a href="{{ url_for('home') }}">
-    <button class="center-btn">กลับไปหน้าแรก</button>
-</a>
 
 <style>
     .center-btn {
@@ -55,6 +54,4 @@
         border: 1px solid black;
         cursor: pointer;
     }
-</style>>
-
-</html>
+</style>
