@@ -17,21 +17,16 @@
         }
 
         .button-container button {
-            width: 400px;
+            width: 350px;
             height: 500px;
             margin: 10px;
             background-size: cover;
             background-position: center;
             border: none;
             cursor: pointer;
-            color: white;
+            color: rgb(154, 20, 20);
             font-size: 16px;
             font-weight: bold;
-        }
-
-        .button-container button:hover {
-            width: 220px;
-            height: 220px;
         }
     </style>
 </head>
@@ -42,7 +37,7 @@
     </a>
     <div class="button-container">
         <a href="{{ url_for('questions') }}">
-            <button style="background-image: url('{{ url_for('static', filename='images/questions.png') }}');">
+            <button style="background-image: url('{{ url_for('static', filename='images/ttt.png') }}');">
                 รวมโจทย์
             </button>
         </a>
