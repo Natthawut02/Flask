@@ -85,7 +85,7 @@ def edit():
         return redirect(url_for('home'))
     
     if request.method == 'POST':
-        # ...existing code for handling form submission...
+
         pass
     
     return render_template('edit.html')
@@ -98,7 +98,7 @@ def edit_user(user_id):
     user = User.query.get_or_404(user_id)
     
     if request.method == 'POST':
-        # ...existing code for handling form submission...
+
         pass
     
     return render_template('edit_user.html', user=user)
