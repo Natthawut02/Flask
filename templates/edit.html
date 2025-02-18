@@ -10,7 +10,7 @@
 
 <body class="bg-light d-flex align-items-center justify-content-center" style="height: 100vh;">
     <div class="container">
-        {% if not current_user.is_authenticated or not current_user.is_admin %}
+        {% if current_user.username != ADMIN_USERNAME %}
         <div class="alert alert-danger text-center">
             คุณไม่มีสิทธิ์ในการแก้ไขเนื้อหา
         </div>
