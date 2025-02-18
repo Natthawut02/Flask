@@ -10,6 +10,11 @@
 <body>
     <h1>ทริคการอ่าน</h1>
     <p>รวมทริคการอ่านต่างๆ</p>
+    <ul>
+        {% for tip in tips %}
+        <li>{{ tip }}</li>
+        {% endfor %}
+    </ul>
     <a href="{{ url_for('dashboard') }}">
         <button>กลับไป Dashboard</button>
     </a>

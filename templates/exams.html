@@ -10,6 +10,11 @@
 <body>
     <h1>ข้อสอบ</h1>
     <p>รวมข้อสอบต่างๆ</p>
+    <ul>
+        {% for exam in exams %}
+        <li>{{ exam }}</li>
+        {% endfor %}
+    </ul>
     <a href="{{ url_for('dashboard') }}">
         <button>กลับไป Dashboard</button>
     </a>
