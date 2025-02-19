@@ -9,28 +9,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         body {
-            background: linear-gradient(rgba(117, 7, 7, 0.7), rgba(221, 34, 34, 0.7)),
-
+            background-image: url('https://media.istockphoto.com/id/1460007178/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%A1%E0%B8%B8%E0%B8%94%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B8%AD%E0%B8%9A%E0%B8%99%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B9%8D%E0%B8%B2%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%88%E0%B8%B1%E0%B8%A2%E0%B9%83%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5.jpg?s=612x612&w=0&k=20&c=FYWfyv7CRpxIp-zsvDmIOCl8AHM36IkHDtlBZqpTJ5I=');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
         }
     </style>
 </head>
 
 <body>
-
-    <div class="container">
-        <div class="d-flex justify-content-end mt-3">
-            <a href="{{ url_for('register') }}" class="btn btn-secondary">สมัครสมาชิก</a>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center mt-5">
-                <h1 class="fs-1 fs-md-3">ยินดีต้อนรับสู่ NTBR 📚</h1>
-                <p class="fs-1 fs-md-3">รวมข้อสอบ</p>
-                <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg mt-3">เข้าสู่ระบบ</a>
+    <nav>
+        <div class="container">
+            <div class="d-flex justify-content-end mt-3">
+                <a href="{{ url_for('register') }}" class="btn btn-secondary">สมัครสมาชิก</a>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center mt-5">
+                    <h1 class="fs-1 fs-md-3">ยินดีต้อนรับสู่ NTBR 📚</h1>
+                    <p class="fs-1 fs-md-3">รวมข้อสอบ</p>
+                    <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg mt-3">เข้าสู่ระบบ</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
