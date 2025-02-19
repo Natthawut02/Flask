@@ -8,7 +8,7 @@
     <style>
         .button-container {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             margin-top: 20px;
         }
 
@@ -37,16 +37,6 @@
         <a href="{{ url_for('questions') }}">
             <button style="background-image: url('{{ url_for('static', filename='images/ttt.png') }}');">
                 รวมโจทย์
-            </button>
-        </a>
-        <a href="{{ url_for('exams') }}">
-            <button style="background-image: url('{{ url_for('static', filename='images/exams.png') }}');">
-                ข้อสอบ
-            </button>
-        </a>
-        <a href="{{ url_for('tips') }}">
-            <button style="background-image: url('{{ url_for('static', filename='images/tips.png') }}');">
-                ทริคการอ่าน
             </button>
         </a>
     </div>
