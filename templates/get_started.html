@@ -5,19 +5,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>เริ่มต้นใช้งาน - คลังข้อสอบ NTBR</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap');
+
+        body {
+            background: #0F172A;
+            color: #fff;
+            font-family: 'Noto Sans Thai', sans-serif;
+            letter-spacing: 0.3px;
+            line-height: 1.6;
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: calc(100vh - 60px);
+            overflow: hidden;
+            padding: 4rem 0;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            width: 1000px;
+            height: 1000px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #7C3AED, #3B82F6);
+            top: -400px;
+            right: -400px;
+            filter: blur(80px);
+            z-index: 0;
+            opacity: 0.8;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #EC4899, #8B5CF6);
+            bottom: -300px;
+            left: -300px;
+            filter: blur(80px);
+            z-index: 0;
+            opacity: 0.8;
+        }
+
+        .content-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .step-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(45deg, #3B82F6, #8B5CF6);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transform: rotate(-10deg);
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .glass-card:hover .step-icon {
+            transform: rotate(0deg) scale(1.1);
+        }
+
+        .btn-gradient {
+            background: linear-gradient(45deg, #3B82F6, #8B5CF6);
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-gradient:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+            color: white;
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: transparent;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
+            color: white;
+        }
+
+        .title-gradient {
+            background: linear-gradient(45deg, #60A5FA, #A78BFA);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            text-shadow: 0 4px 15px rgba(96, 165, 250, 0.2);
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h3 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 0;
+            position: relative;
+            z-index: 2;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            font-weight: 400;
+            margin: 0;
+        }
+    </style>
 </head>
 
-<body class="bg-light text-dark">
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">เริ่มต้นใช้งาน</h1>
-        <p class="lead text-center">ยินดีต้อนรับสู่คลังข้อสอบ NTBR! เริ่มต้นการเรียนรู้ของคุณได้ที่นี่.</p>
-        <div class="text-center">
-            <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg">สมัครสมาชิก</a>
-            <a href="{{ url_for('login') }}" class="btn btn-secondary btn-lg">เข้าสู่ระบบ</a>
+<body>
+    <div class="hero-section">
+        <div class="container content-container">
+            <div class="text-center mb-5">
+                <h1 class="display-3 mb-4 title-gradient animate__animated animate__fadeInDown">คลังข้อสอบ NTBR</h1>
+                <p class="subtitle mb-5 animate__animated animate__fadeIn animate__delay-1s">
+                    เริ่มต้นการเรียนรู้ของคุณกับระบบคลังข้อสอบที่ดีที่สุด
+                    พร้อมฟีเจอร์ที่จะช่วยให้การเรียนของคุณมีประสิทธิภาพมากขึ้น</p>
+                <div
+                    class="d-flex justify-content-center gap-4 mb-5 animate__animated animate__fadeInUp animate__delay-1s">
+                    <a href="{{ url_for('register') }}" class="btn-gradient">เริ่มต้นใช้งาน</a>
+                    <a href="{{ url_for('login') }}" class="btn-outline">เข้าสู่ระบบ</a>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6 animate__animated animate__fadeInLeft animate__delay-2s">
+                    <div class="glass-card h-100">
+                        <div class="step-icon">1</div>
+                        <h3>ลงทะเบียนฟรี</h3>
+                        <p class="card-text">เริ่มต้นการใช้งานง่ายๆ เพียงสมัครสมาชิกพร้อม
+                            รับสิทธิ์ในการใช้งาน</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight animate__delay-2s">
+                    <div class="glass-card h-100">
+                        <div class="step-icon">2</div>
+                        <h3>เลือกข้อสอบที่ใช่</h3>
+                        <p class="card-text">เลือกหมวดหมู่และวิชาที่คุณต้องการ มีข้อสอบให้เลือกมากมาย
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInLeft animate__delay-3s">
+                    <div class="glass-card h-100">
+                        <div class="step-icon">3</div>
+                        <h3>ฝึกฝนและพัฒนา</h3>
+                        <p class="card-text">ทำข้อสอบได้ไม่จำกัด พร้อมคำอธิบายและเฉลยข้อสอบ
+                            ที่ช่วยให้คุณเรียนรู้ได้อย่างมีประสิทธิภาพ
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight animate__delay-3s">
+                    <div class="glass-card h-100">
+                        <div class="step-icon">4</div>
+                        <h3>วิเคราะห์ผลการเรียน</h3>
+                        <p class="card-text">ดูพัฒนาการของคุณแบบเรียลไทม์</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text text-center">© 2025 คลังข้อสอบ NTBR. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
