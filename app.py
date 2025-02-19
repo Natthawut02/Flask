@@ -149,6 +149,51 @@ def admin_dashboard():
     users = User.query.all()
     return render_template('admin_dashboard.html', users=users)
 
+@app.route('/math')
+@login_required
+def math():
+    return render_template('subject.html', subject_name="คณิตศาสตร์")
+
+@app.route('/science')
+@login_required
+def science():
+    return render_template('subject.html', subject_name="วิทยาศาสตร์")
+
+@app.route('/english')
+@login_required
+def english():
+    return render_template('subject.html', subject_name="ภาษาอังกฤษ")
+
+@app.route('/physics')
+@login_required
+def physics():
+    return render_template('subject.html')
+
+@app.route('/biology')
+@login_required
+def biology():
+    return render_template('subject.html', subject_name="ชีววิทยา")
+
+@app.route('/social')
+@login_required
+def social():
+    return render_template('subject.html', subject_name="สังคม")
+
+@app.route('/thai')
+@login_required
+def thai():
+    return render_template('subject.html', subject_name="ภาษาไทย")
+
+@app.route('/health')
+@login_required
+def health():
+    return render_template('subject.html', subject_name="สุขศึกษา")
+
+@app.route('/history')
+@login_required
+def history():
+    return render_template('subject.html', subject_name="ประวัติศาสตร์")
+
 with app.app_context():
     db.create_all()
 
