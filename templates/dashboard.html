@@ -4,19 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Grid Example</title>
+    <title>Dashboard</title>
     <!-- เรียกใช้ Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s;
+        }
+    </style>
 </head>
 
 <body class="bg-dark text-light">
     <div class="container mt-5">
+        <h1 class="text-center mb-4">Dashboard</h1>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <!-- Card 1 -->
             <div class="col">
                 <a href="/math" class="btn btn-outline-light btn-lg p-0 w-100 h-100">
-                    <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="คณิตศาสตร์">
-                    <div class="card-body text-center">
+                    <div class="card bg-dark text-light">
+                        <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="คณิตศาสตร์">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">คณิตศาสตร์</h5>
+                            <p class="card-text">เรียนรู้เกี่ยวกับคณิตศาสตร์</p>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -24,8 +35,12 @@
             <!-- Card 2 -->
             <div class="col">
                 <a href="/science" class="btn btn-outline-light btn-lg p-0 w-100 h-100">
-                    <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="วิทยาศาสตร์">
-                    <div class="card-body text-center">
+                    <div class="card bg-dark text-light">
+                        <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="วิทยาศาสตร์">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">วิทยาศาสตร์</h5>
+                            <p class="card-text">เรียนรู้เกี่ยวกับวิทยาศาสตร์</p>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -33,8 +48,12 @@
             <!-- Card 3 -->
             <div class="col">
                 <a href="/english" class="btn btn-outline-light btn-lg p-0 w-100 h-100">
-                    <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="ภาษาอังกฤษ">
-                    <div class="card-body text-center">
+                    <div class="card bg-dark text-light">
+                        <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="ภาษาอังกฤษ">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">ภาษาอังกฤษ</h5>
+                            <p class="card-text">เรียนรู้เกี่ยวกับภาษาอังกฤษ</p>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -42,8 +61,12 @@
             <!-- Card 4 -->
             <div class="col">
                 <a href="/physics" class="btn btn-outline-light btn-lg p-0 w-100 h-100">
-                    <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="ฟิสิกส์">
-                    <div class="card-body text-center">
+                    <div class="card bg-dark text-light">
+                        <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="ฟิสิกส์">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">ฟิสิกส์</h5>
+                            <p class="card-text">เรียนรู้เกี่ยวกับฟิสิกส์</p>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -51,8 +74,12 @@
             <!-- Card 5 -->
             <div class="col">
                 <a href="/biology" class="btn btn-outline-light btn-lg p-0 w-100 h-100">
-                    <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="ชีววิทยา">
-                    <div class="card-body text-center">
+                    <div class="card bg-dark text-light">
+                        <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="ชีววิทยา">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">ชีววิทยา</h5>
+                            <p class="card-text">เรียนรู้เกี่ยวกับชีววิทยา</p>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -60,8 +87,12 @@
             <!-- Card 6 -->
             <div class="col">
                 <a href="/social" class="btn btn-outline-light btn-lg p-0 w-100 h-100">
-                    <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="สังคม">
-                    <div class="card-body text-center">
+                    <div class="card bg-dark text-light">
+                        <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="สังคม">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">สังคม</h5>
+                            <p class="card-text">เรียนรู้เกี่ยวกับสังคม</p>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -69,8 +100,12 @@
             <!-- Card 7 -->
             <div class="col">
                 <a href="/thai" class="btn btn-outline-light btn-lg p-0 w-100 h-100">
-                    <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="ภาษาไทย">
-                    <div class="card-body text-center">
+                    <div class="card bg-dark text-light">
+                        <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="ภาษาไทย">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">ภาษาไทย</h5>
+                            <p class="card-text">เรียนรู้เกี่ยวกับภาษาไทย</p>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -78,8 +113,12 @@
             <!-- Card 8 -->
             <div class="col">
                 <a href="/health" class="btn btn-outline-light btn-lg p-0 w-100 h-100">
-                    <img src="D:\flask_project\static\images\math.jpeg" class="card-img-top" alt="สุขศึกษา">
-                    <div class="card-body text-center">
+                    <div class="card bg-dark text-light">
+                        <img src="D:\flask_project\static\images\math.jpeg" class="card-img-top" alt="สุขศึกษา">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">สุขศึกษา</h5>
+                            <p class="card-text">เรียนรู้เกี่ยวกับสุขศึกษา</p>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -87,8 +126,12 @@
             <!-- Card 9 -->
             <div class="col">
                 <a href="/history" class="btn btn-outline-light btn-lg p-0 w-100 h-100">
-                    <img src="D:\flask_project\static\images\math.jpeg" class="card-img-top" alt="ประวัติศาสตร์">
-                    <div class="card-body text-center">
+                    <div class="card bg-dark text-light">
+                        <img src="D:\flask_project\static\images\math.jpeg" class="card-img-top" alt="ประวัติศาสตร์">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">ประวัติศาสตร์</h5>
+                            <p class="card-text">เรียนรู้เกี่ยวกับประวัติศาสตร์</p>
+                        </div>
                     </div>
                 </a>
             </div>
