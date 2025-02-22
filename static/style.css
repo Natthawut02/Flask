@@ -1,0 +1,49 @@
+body {
+    background-image: url('../static/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* เพิ่ม class ใหม่ */
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.text-light {
+    color: #f8f9fa !important;
+}
+
+.bg-secondary {
+    background-color: #6c757d !important;
+}
+
+.btn-outline-light {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.btn-outline-light:hover {
+    color: #343a40;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+/* เพิ่ม class .col */
+.col {
+    flex: 1 0 0%;
+    max-width: 100%;
+    padding: 0.75rem;
+}
