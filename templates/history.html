@@ -1,22 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ประวัติศาสตร์</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0f2f1, #b2dfdb);
+            color: #2c3e50;
+        }
+
+        .history-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.9) !important;
+            border: none !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .history-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.9) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #2c3e50 !important;
+        }
+
+        .nav-link:hover {
+            color: #16a085 !important;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-custom {
+            background-color: #16a085;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #1abc9c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(22, 160, 133, 0.3);
+        }
+
+        .card-title {
+            color: #16a085;
+        }
+
+        .card-text {
+            color: #34495e;
+        }
+
+        h1,
+        .lead {
+            color: #2c3e50;
+        }
+    </style>
 </head>
 
-<body class="bg-dark text-light">
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-book"></i> ประวัติศาสตร์
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">หน้าหลัก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('dashboard') }}">รวมวิชา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ติดต่อ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container mt-5">
-        <h1 class="text-center">ประวัติศาสตร์</h1>
-        <div class="content mt-4">
-            <!-- ใส่ข้อมูลรายวิชาที่นี่ -->
-            <p>เนื้อหาของวิชา ประวัติศาสตร์ จะถูกแสดงที่นี่</p>
+        <div class="text-center animate__animated animate__fadeIn">
+            <h1 class="display-4 fw-bold mb-4">ประวัติศาสตร์</h1>
+            <p class="lead mb-5">เรียนรู้ประวัติศาสตร์อย่างสนุกและเข้าใจง่าย</p>
+        </div>
+
+        <!-- Add content here if needed -->
+
+        <div class="text-center mt-4">
+            <!-- Add buttons or additional content here if needed -->
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
 
 </html>
